@@ -1,3 +1,5 @@
+#5F
+___
 - playmisfecl - **Michał Piątkowski** – obsługa kalendarzy, wydarzeń i przechowywania danych.
 
 - BayHarbourGooner420 - **Mikołaj Sygieda** - stworzenie podstawowej struktury aplikacji i konfiguracja projektu Android.
