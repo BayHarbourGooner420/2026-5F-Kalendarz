@@ -1,11 +1,15 @@
 1. Główne opcje programu
 Siatka Główna Kalendarza: Wyświetlanie dni miesiąca z możliwością dynamicznego przełączania widoków. Każda komórka wskazuje wydarzenia użytkownika oraz święta międzynarodowe.
+
 Dynamiczne Motywy Kalendarzy: Interfejs dostosowuje swój styl wizualny (tło, kolorystykę i elementy dekoracyjne) w zależności od aktywnego systemu kalendarzowego (np. motyw tradycyjny dla kalendarza islamskiego, chińskiego lub gregoriańskiego).
+
 Obsługa Kalendarzy Świata: Integracja z zewnętrznym API (np. Nager.Date) w celu pobierania i filtrowania świąt państwowych oraz religijnych dla wielu krajów jednocześnie.
+
 Przelicznik Systemów Dat: Możliwość podglądu równoległych dat z alternatywnych systemów rachuby czasu (np. kalendarz księżycowy, Hijri, żydowski).
+
 Zarządzanie Wydarzeniami: Pełna obsługa tworzenia, edycji i usuwania prywatnych notatek, wpisów oraz przypomnień w lokalnej bazie danych.
 
-2. Przepływ sterowania (Flow)
+3. Przepływ sterowania (Flow)
 
 A. Uruchomienie Aplikacji
 1. Inicjalizacja lokalnej bazy danych (Room).
