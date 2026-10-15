@@ -12,7 +12,7 @@
 2. Przepływ sterowania
 
 A. Uruchomienie Aplikacji
-1. Inicjalizacja lokalnej bazy danych (Room).
+1. Inicjalizacja lokalnej bazy danych .
 2. Sprawdzenie połączenia z siecią i pobranie aktualnych danych o świętach dla wybranej listy krajów.
 3. Załadowanie preferowanego motywu wizualnego na podstawie zapisanych ustawień.
 
