@@ -1,0 +1,42 @@
+# Kalendarz iOS
+
+To repo zawiera prostą wersję aplikacji Kalendarz w SwiftUI przygotowaną do zbudowania na iPhonie.
+
+Ważne:
+- `.ipa` nie da się wygenerować w GitHub Actions ani bez Maca z Xcode.
+- Na komputerze z Xcode i certyfikatem Apple trzeba uruchomić skrypt `ios/build-ipa.sh`.
+
+## Wymagania
+- MacBook z Xcode 15+
+- zainstalowane `xcodegen`: `brew install xcodegen`
+- podpis Apple Developer / provisioning profile
+
+## Budowanie
+
+```bash
+cd ios
+chmod +x build-ipa.sh
+./build-ipa.sh
+```
+
+Po zakończeniu skrypt zapisze archiwum i gotowy plik `.ipa` w:
+
+```text
+ios/build/ipa/
+```
+
+## Uwaga
+- `exportOptions.plist` jest ustawiony na `development`.
+- Jeśli chcesz `.ipa` do App Store lub TestFlight, zmień `method` oraz dodaj `teamID` i profil podpisania.
+
+## Co jest zaimplementowane
+- widok kalendarza z nawigacją po miesiącach
+- proste dodawanie wydarzeń do dni
+- lista wydarzeń z podziałem po datach
+- SwiftUI, gotowe do uruchomienia na iPhone'ie
+
+## Projekt
+- `ios/project.yml` — konfiguracja XcodeGen
+- `ios/KalendarzApp/` — źródła aplikacji
+- `ios/build-ipa.sh` — eksport `.ipa`
+- `ios/exportOptions.plist` — ustawienia eksportu

@@ -1,0 +1,35 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="160dp"
+    android:viewportWidth="360"
+    android:viewportHeight="160">
+  <!-- Outer Arch Fill -->
+  <path
+      android:fillColor="#E6C88A"
+      android:fillAlpha="0.2"
+      android:pathData="M0,0 L360,0 L360,60 C300,120 240,150 180,150 C120,150 60,120 0,60 Z" />
+  <!-- Inner Arch Fill -->
+  <path
+      android:fillColor="#C8963E"
+      android:fillAlpha="0.15"
+      android:pathData="M0,0 L360,0 L360,40 C300,100 240,130 180,130 C120,130 60,100 0,40 Z" />
+  <!-- Main Golden Arch Strokes -->
+  <path
+      android:strokeColor="#C8963E"
+      android:strokeWidth="2"
+      android:pathData="M0,50 C60,110 120,140 180,140 C240,140 300,110 360,50" />
+  <path
+      android:strokeColor="#9A6E24"
+      android:strokeWidth="1.5"
+      android:pathData="M0,35 C60,95 120,125 180,125 C240,125 300,95 360,35" />
+  <!-- Center Decorative Dome Peak -->
+  <path
+      android:strokeColor="#C8963E"
+      android:strokeWidth="1.5"
+      android:pathData="M160,130 C170,148 180,158 180,158 C180,158 190,148 200,130" />
+  <!-- Decorative Mandala Rays -->
+  <path
+      android:strokeColor="#C8963E"
+      android:strokeWidth="1"
+      android:pathData="M180,0 L180,125 M140,0 L155,100 M220,0 L205,100 M100,0 L125,80 M260,0 L235,80 M60,0 L95,60 M300,0 L265,60" />
+</vector>

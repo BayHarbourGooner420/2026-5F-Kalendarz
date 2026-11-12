@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootAddEvent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFBF7">
+
+    <!-- Top Decorative Oriental Overlay (Visible when Islamic theme active) -->
+    <ImageView
+        android:id="@+id/imgTopDecoration"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_oriental_top"
+        android:visibility="visible" />
+
+    <!-- Bottom Decorative Oriental Overlay -->
+    <ImageView
+        android:id="@+id/imgBottomDecoration"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_oriental_bottom"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header Toolbar -->
+        <LinearLayout
+            android:id="@+id/toolbarAddEvent"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#9E7A31"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Wstecz"
+                android:src="@drawable/ic_arrow_left"
+                app:tint="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvHeaderTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:text="Dodaj Nowe Wydarzenie"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnSave"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Zapisz"
+                android:src="@drawable/ic_check"
+                app:tint="#FFFFFF" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Tytuł Field -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTitle"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tytuł">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Opis Field -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDescription"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Opis">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:gravity="top|start"
+                        android:inputType="textMultiLine"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Data and Godzina Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilDate"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:hint="Data">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:textColor="#333333"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilTime"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:hint="Godzina">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:text="19:00"
+                            android:textColor="#333333"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- Theme Selection Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Theme:"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/layoutThemeButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Theme 1: Gregorian (Green) -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardThemeGregorian"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="6dp"
+                        app:cardBackgroundColor="#2E7D32"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="2dp"
+                        app:strokeColor="#1B5E20"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_calendar"
+                            app:tint="#FFFFFF" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Theme 2: Islamic (Gold) -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardThemeIslamic"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="6dp"
+                        app:cardBackgroundColor="#9E7A31"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="2dp"
+                        app:strokeColor="#795548"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_islamic"
+                            app:tint="#FFFFFF" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Theme 3: Jewish (Purple) -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardThemeJewish"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="6dp"
+                        app:cardBackgroundColor="#6A1B9A"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="2dp"
+                        app:strokeColor="#4A148C"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_jewish"
+                            app:tint="#FFFFFF" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Theme 4: Hindu (Saffron) -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardThemeHindu"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="6dp"
+                        app:cardBackgroundColor="#AB47BC"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="2dp"
+                        app:strokeColor="#6A1B9A"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_hindu"
+                            app:tint="#FFFFFF" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Theme 5: Chinese (Blue/Red) -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardThemeChinese"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="6dp"
+                        app:cardBackgroundColor="#1565C0"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="2dp"
+                        app:strokeColor="#0D47A1"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_chinese"
+                            app:tint="#FFFFFF" />
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <!-- Lokalizacja Field -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilLocation"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="Lokalizacja">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>
